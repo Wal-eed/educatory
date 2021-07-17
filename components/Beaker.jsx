@@ -3,7 +3,16 @@ import styles from './Beaker.module.scss';
 
 const Beaker = () => {
 	return (
-		<div className={styles.container}>
+		<div
+			className={styles.container}
+			style={{
+				position: 'absolute',
+				top: '-60px',
+				right: '-170px',
+				transform: `scale(0.2) rotate(-20deg)`,
+				transformOrigin: '0 0',
+			}}
+		>
 			<div className={styles.beaker}>
 				<div className={styles.liquid}>
 					<div className={styles.bubble}></div>

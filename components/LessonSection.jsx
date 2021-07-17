@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from '@chakra-ui/react';
 import LessonCards from 'components/LessonCards';
 import { Text } from '@chakra-ui/react';
+import Beaker from 'components/Beaker';
 
 const lessons = [
 	{
@@ -42,8 +43,6 @@ const lessonCards = {
 
 const getLessonCards = (lessonName) => {
 	const normalisedName = lessonName.toLowerCase();
-	console.log(lessonName);
-	console.log(lessonCards.science);
 	return lessonCards[normalisedName];
 };
 
@@ -56,11 +55,26 @@ const LessonSection = () => {
 					style={{
 						background: 'white',
 						margin: 20,
-						padding: 10,
+						// paddingTop: 20,
 						borderRadius: '10px',
 						boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
+						position: 'relative',
+						color: 'white',
+						background: `url(/images/${lessonCategory.title.toLowerCase()}.png)`,
 					}}
 				>
+					{/* white strip */}
+					{/* <div
+						className={'whitestrip'}
+						style={{
+							position: 'absolute',
+							width: '100%',
+							height: '20px',
+							top: 0,
+							background: 'white',
+						}}
+					/> */}
+					{lessonCategory.title === 'Science' && <Beaker />}
 					<Text fontSize="2xl" style={{ paddingLeft: 10, paddingTop: 10 }}>
 						{lessonCategory.title}
 					</Text>

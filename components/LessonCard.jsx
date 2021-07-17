@@ -7,7 +7,11 @@ const LessonCard = ({ card }) => {
 	const { title, image, label } = card;
 
 	return (
-		<div>
+		<div
+			style={{
+				color: 'black',
+			}}
+		>
 			<div className={styles.wrap}>
 				<div
 					className={styles.card}

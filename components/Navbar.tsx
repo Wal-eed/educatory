@@ -41,10 +41,15 @@ export default function withAction() {
 	return (
 		<>
 			<Box
-				bg={useColorModeValue('gray.100', 'gray.900')}
 				px={4}
 				style={{
-					boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;',
+					boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
+					color: 'white',
+					background: 'linear-gradient(90deg, rgba(0,72,150,1) 0%, rgba(115,23,129,1) 100%)',
+					width: '99%',
+					margin: '0 auto',
+					// borderRadius: '10px',
+					// marginTop: '10px',
 				}}
 			>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>

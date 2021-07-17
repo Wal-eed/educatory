@@ -4,7 +4,6 @@ import LessonSection from 'components/LessonSection';
 import StatsHeader from 'components/StatsHeader';
 import { Container } from '@chakra-ui/react';
 import RippleButton from 'components/RippleButton';
-
 const home = (props) => {
 	return (
 		<div
