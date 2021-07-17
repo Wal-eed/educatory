@@ -1,6 +1,7 @@
 import React from 'react';
 import LessonCard from './LessonCard';
 import { Grid, Box } from '@chakra-ui/react';
+import Card from './Card';
 
 const LessonCards = ({ cards }) => {
 	return (
@@ -9,7 +10,8 @@ const LessonCards = ({ cards }) => {
 				{cards &&
 					cards.map((card) => (
 						<Box>
-							<LessonCard card={card} />
+							{/* <LessonCard card={card} /> */}
+							<Card card={card} />
 						</Box>
 					))}
 			</Grid>
