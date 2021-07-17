@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './LessonCard.module.scss';
 import { Container } from '@chakra-ui/react';
+import RippleButton from './RippleButton';
 
 const LessonCard = ({ card }) => {
 	const { title, image, label } = card;
@@ -26,6 +27,14 @@ const LessonCard = ({ card }) => {
 						<h3 style={{}}>
 							<strong>{title}</strong>
 						</h3>
+					</Container>
+					<Container
+						style={{
+							position: 'absolute',
+							bottom: '5px',
+						}}
+					>
+						<RippleButton text="Start" />
 					</Container>
 					{label && (
 						<span className={styles.tag}>
