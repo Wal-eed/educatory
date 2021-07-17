@@ -35,87 +35,75 @@ const Viz: React.FC = () => {
       <Box bg="beige" padding="3rem">
         <Flex flexDir="column" justifyContent="space-between">
           <Box>
+            <Button bg="red.300" onClick={(e) => router.push("/")}>
+              Go back
+            </Button>
             <Heading as="h1" fontSize="4xl">
               Lorem ipsum dolor sit amet.
             </Heading>
+            <br />
             <i>Click and drag on the tree to view from different angles.</i>
             <Spacer />
-            <Accordion allowMultiple>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      Fact 1
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      Fact 2
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      Fact 3
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      Fact 4
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
+          </Box>
+          <Box
+            rounded="0.5rem"
+            bgColor="white"
+            padding="0.5rem"
+            marginTop="1rem"
+            marginBottom="1rem"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            vel ea aliquid soluta quas molestias cupiditate repellat quasi alias
+            officiis repudiandae consequuntur nisi dolores ipsum possimus, a
+            tempore atque voluptatibus numquam porro in illo itaque? Et, amet
+            eveniet harum ducimus dignissimos explicabo? Recusandae, labore
+            ducimus earum aperiam at temporibus cum.
+          </Box>
+          <Box
+            rounded="0.5rem"
+            bgColor="white"
+            padding="0.5rem"
+            marginTop="1rem"
+            marginBottom="1rem"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            vel ea aliquid soluta quas molestias cupiditate repellat quasi alias
+            officiis repudiandae consequuntur nisi dolores ipsum possimus, a
+            tempore atque voluptatibus numquam porro in illo itaque? Et, amet
+            eveniet harum ducimus dignissimos explicabo? Recusandae, labore
+            ducimus earum aperiam at temporibus cum.
+          </Box>
+          <Box
+            rounded="0.5rem"
+            bgColor="white"
+            padding="0.5rem"
+            marginTop="1rem"
+            marginBottom="1rem"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            vel ea aliquid soluta quas molestias cupiditate repellat quasi alias
+            officiis repudiandae consequuntur nisi dolores ipsum possimus, a
+            tempore atque voluptatibus numquam porro in illo itaque? Et, amet
+            eveniet harum ducimus dignissimos explicabo? Recusandae, labore
+            ducimus earum aperiam at temporibus cum.
+          </Box>
+          <Box
+            rounded="0.5rem"
+            bgColor="white"
+            padding="0.5rem"
+            marginTop="1rem"
+            marginBottom="1rem"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            vel ea aliquid soluta quas molestias cupiditate repellat quasi alias
+            officiis repudiandae consequuntur nisi dolores ipsum possimus, a
+            tempore atque voluptatibus numquam porro in illo itaque? Et, amet
+            eveniet harum ducimus dignissimos explicabo? Recusandae, labore
+            ducimus earum aperiam at temporibus cum.
           </Box>
           <Spacer />
           <Box>
             <Flex>
-              <Button bg="red.300" onClick={(e) => router.push("/")}>
-                Go back
-              </Button>
-              <Spacer />
-
               <Button bg="green.300">Take the quiz</Button>
             </Flex>
           </Box>
