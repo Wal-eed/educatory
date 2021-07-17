@@ -14,7 +14,6 @@ const LineChart = ({
 		numeracy: [
 			{ date: '18 Jul', number: 40 },
 			{ date: '17 Jul', number: 40 },
-
 		],
 		geography: [
 			{ date: '18 Jul', number: 40 },
@@ -26,20 +25,23 @@ const LineChart = ({
 		series: [
 			{
 				name: 'science',
-				data: data.science.map(item => item.number),
+				data: data.science.map((item) => item.number),
 			},
 			{
 				name: 'numeracy',
-				data: data.numeracy.map(item => item.number),
+				data: data.numeracy.map((item) => item.number),
 			},
 
 			{
 				name: 'geography',
-				data: data.geography.map(item => item.number),
+				data: data.geography.map((item) => item.number),
 			},
 		],
 		options: {
 			chart: {
+				animations: {
+					speed: 2000,
+				},
 				height: 350,
 				type: 'line',
 				zoom: {
@@ -55,7 +57,7 @@ const LineChart = ({
 				// dashArray: [0, 5, 8],
 			},
 			title: {
-				text: 'Page Statistics',
+				text: '',
 				align: 'left',
 			},
 			legend: {
@@ -70,7 +72,7 @@ const LineChart = ({
 				},
 			},
 			xaxis: {
-				categories: data.science.map(item => item.date), 
+				categories: data.science.map((item) => item.date),
 			},
 			tooltip: {
 				y: [

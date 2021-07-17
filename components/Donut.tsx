@@ -11,8 +11,11 @@ const Donut = ({ label = 'no label', percentage = 50, height = 200 }) => {
 			chart: {
 				height: height,
 				type: 'radialBar',
+				animations: {
+          speed: 2000,
+        },
 			},
-			colors: ['#20E647'],
+			colors: ['#66DDDB'],
 			plotOptions: {
 				radialBar: {
 					startAngle: -150,
