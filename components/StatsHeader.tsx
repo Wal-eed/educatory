@@ -55,6 +55,7 @@ export default function SimpleThreeColumns() {
 						}
 					/>
 				</SimpleGrid>
+
 				<Link href="stats" passHref>
 					<Flex>
 						<ChevronRightIcon w={6} h={6} />
