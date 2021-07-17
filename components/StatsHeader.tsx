@@ -8,6 +8,7 @@ import Link from 'next/link';
 import styles from './StatsHeader.module.scss';
 import Image from 'next/image';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+
 interface FeatureProps {
 	title: string;
 	text: string;
@@ -55,10 +56,13 @@ export default function SimpleThreeColumns() {
 						}
 					/>
 				</SimpleGrid>
+
 				<Link href="stats" passHref>
 					<Flex>
 						<ChevronRightIcon w={6} h={6} />
-						<Text>See More</Text>
+						<Text style={{}}>
+							<u>See More</u>
+						</Text>
 					</Flex>
 				</Link>
 

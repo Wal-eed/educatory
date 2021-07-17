@@ -27,6 +27,9 @@ const Radar = ({
 			chart: {
 				height: height,
 				type: 'radar',
+				animations: {
+					speed: 2000,
+				},
 			},
 			title: {
 				text: label,

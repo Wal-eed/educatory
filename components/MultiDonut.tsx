@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const MultiDonut = ({
-    title="title",
-    height = 350,
+	title = 'title',
+	height = 350,
 	data = [
 		{ category: 'January', number: 100 },
 		{ category: 'January', number: 100 },
@@ -20,6 +20,9 @@ const MultiDonut = ({
 		options: {
 			chart: {
 				height: height,
+				animations: {
+					speed: 2000,
+				},
 				type: 'radialBar',
 			},
 			plotOptions: {
