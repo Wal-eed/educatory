@@ -6,6 +6,7 @@ import Radar from 'components/Radar';
 // import StatsSideBar from 'components/StatsSideBar';
 import LineChart from 'components/LineChart';
 import Navbar from 'components/Navbar';
+import Paper from 'components/Paper';
 
 const Stats = () => {
 	const data = {
@@ -49,22 +50,32 @@ const Stats = () => {
 		<>
 			<Navbar />
 			<Container maxW="container.xl">
-				<Flex justifyContent="center">
-					<Heading>Progress over time</Heading>
-				</Flex>
-				<LineChart data={data} />
-				<Flex justifyContent="center">
-					<Heading>Progress</Heading>
-				</Flex>
+				<Paper>
+					<Flex justifyContent="center">
+						<Heading>Progress over time</Heading>
+					</Flex>
+					<LineChart data={data} />
+				</Paper>
 				<SimpleGrid columns={2} spacing={10}>
-					<MultiDonut data={data_today} />
-					<Radar data={data_today} />
+					<Paper>
+						<Flex justifyContent="center">
+							<Heading>Progress</Heading>
+						</Flex>
+						<MultiDonut data={data_today} />
+					</Paper>
+					<Paper>
+						<Flex justifyContent="center">
+							<Heading>Core Competencies</Heading>
+						</Flex>
+						<Radar data={data_today} />
+					</Paper>
 				</SimpleGrid>
-
-				<Flex justifyContent="center">
-					<Heading>Daily commitment</Heading>
-				</Flex>
-				<HeatMap />
+				<Paper>
+					<Flex justifyContent="center">
+						<Heading>Daily commitment</Heading>
+					</Flex>
+					<HeatMap />
+				</Paper>
 			</Container>
 		</>
 	);
