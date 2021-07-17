@@ -12,13 +12,6 @@ const SwitchView = () => {
 			<Link href="/text_page">
 				<Icon w={10} h={10} as={MdLibraryBooks} />
 			</Link>
-			{/* //{' '}
-			<Flex justifyContent="center">
-				// <Icon w={20} h={20} as={MdAudiotrack} />
-				// <Icon w={20} h={20} as={MdRemoveRedEye} />
-				// <Icon w={20} h={20} as={MdLibraryBooks} />
-				//{' '}
-			</Flex> */}
 		</>
 	);
 };
