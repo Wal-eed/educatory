@@ -16,13 +16,13 @@ const Model: React.FC = (props) => {
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <group rotation={[-Math.PI / 2, 0, 0]} scale={[10, 10, 10]}>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={[1, 1, 1]}>
             <mesh
               geometry={nodes.Leaves001_Leavs_0.geometry}
               material={materials.Leavs}
             />
           </group>
-          <group rotation={[-Math.PI / 2, 0, 0]} scale={[10, 10, 10]}>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={[1, 1, 1]}>
             <mesh
               geometry={nodes.Trank001_Trank_0.geometry}
               material={materials.Trank}
