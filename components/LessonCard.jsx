@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './LessonCard.module.scss';
 import { Container } from '@chakra-ui/react';
 import RippleButton from './RippleButton';
+import Link from 'next/link';
 
 const LessonCard = ({ card }) => {
 	const { title, image, label } = card;
@@ -38,7 +39,9 @@ const LessonCard = ({ card }) => {
 							bottom: '5px',
 						}}
 					>
-						<RippleButton text="Start" />
+						<Link href="/viz">
+							<RippleButton text="Start" />
+						</Link>
 					</Container>
 					{label && (
 						<span className={styles.tag}>
