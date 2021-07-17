@@ -3,6 +3,9 @@ import { questions, answers } from 'components/quiz';
 import React, { useState } from 'react';
 import styles from './Quiz.module.scss';
 import RippleButton from 'components/RippleButton';
+import Link from 'next/link';
+import Navbar from 'components/Navbar';
+import { Button } from '@chakra-ui/react';
 
 // const Quiz = () => {
 // 	const [selections, setSelections] = useState([]);
@@ -64,6 +67,7 @@ const Quiz = () => {
 
 	return !quizFinished ? (
 		<div>
+			<Navbar />
 			{questions.map((eachQuestion, qNum) => (
 				<Container className={styles.quizContainer}>
 					<Text className={styles.question} fontSize="2xl">
@@ -86,6 +90,7 @@ const Quiz = () => {
 		</div>
 	) : (
 		<div>
+			<Navbar />
 			{incorrectQuestions.map((eachQuestion) => (
 				<Container className={styles.quizContainer}>
 					<Text className={styles.question} fontSize="2xl">
@@ -122,7 +127,9 @@ const Quiz = () => {
 				</Container>
 			))}
 			<Container style={{ textAlign: 'center', marginTop: '14px' }}>
-				<RippleButton onClick={finishQuiz} text="Submit"></RippleButton>
+				<Link href="/">
+					<Button colorScheme="blue">Return</Button>
+				</Link>
 			</Container>
 		</div>
 	);

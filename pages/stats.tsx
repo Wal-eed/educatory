@@ -5,13 +5,14 @@ import HeatMap from 'components/HeatMap';
 import Radar from 'components/Radar';
 // import StatsSideBar from 'components/StatsSideBar';
 import LineChart from 'components/LineChart';
+import Navbar from 'components/Navbar';
 
 const Stats = () => {
 	const data = {
 		// math:
 		science: [
 			{ date: '12 Jul', number: 25 },
-            { date: '13 Jul', number: 20 },
+			{ date: '13 Jul', number: 20 },
 			{ date: '14 Jul', number: 50 },
 			{ date: '15 Jul', number: 80 },
 			{ date: '16 Jul', number: 70 },
@@ -46,6 +47,7 @@ const Stats = () => {
 
 	return (
 		<>
+			<Navbar />
 			<Container maxW="container.xl">
 				<Flex justifyContent="center">
 					<Heading>Progress over time</Heading>

@@ -1,7 +1,6 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import theme from '../lib/theme';
-import Navbar from 'components/Navbar';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 const colors = {
@@ -28,7 +27,6 @@ const theme2 = extendTheme({ colors, config });
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ChakraProvider theme={theme2}>
-			<Navbar />
 			<Component {...pageProps} />
 		</ChakraProvider>
 	);

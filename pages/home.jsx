@@ -4,6 +4,8 @@ import LessonSection from 'components/LessonSection';
 import StatsHeader from 'components/StatsHeader';
 import { Container } from '@chakra-ui/react';
 import RippleButton from 'components/RippleButton';
+import Navbar from 'components/Navbar';
+
 const home = (props) => {
 	return (
 		<div
@@ -11,6 +13,7 @@ const home = (props) => {
 				height: '100%',
 			}}
 		>
+			<Navbar />
 			<StatsHeader />
 			<LessonSection></LessonSection>
 			{/* <Footer /> */}

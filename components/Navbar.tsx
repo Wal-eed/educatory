@@ -18,9 +18,9 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Settings'];
+const Links = [{ text: 'Dashboard', link: '/stats' }];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children, link }: { children: ReactNode; link: string }) => (
 	<Link
 		px={2}
 		py={1}
@@ -29,7 +29,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 			textDecoration: 'none',
 			bg: useColorModeValue('gray.200', 'gray.700'),
 		}}
-		href={'#'}
+		href={link}
 	>
 		{children}
 	</Link>
@@ -61,10 +61,14 @@ export default function withAction() {
 						onClick={isOpen ? onClose : onOpen}
 					/>
 					<HStack spacing={8} alignItems={'center'}>
-						<Box>educatory</Box>
+						<Link href="/">
+							<Box>educatory</Box>
+						</Link>
 						<HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
 							{Links.map((link) => (
-								<NavLink key={link}>{link}</NavLink>
+								<NavLink key={link.text} link={link.link}>
+									{link.text}
+								</NavLink>
 							))}
 						</HStack>
 					</HStack>
@@ -78,7 +82,7 @@ export default function withAction() {
 									}
 								/>
 							</MenuButton>
-							<MenuList>
+							<MenuList style={{ color: 'black' }}>
 								<MenuItem>Link 1</MenuItem>
 								<MenuItem>Link 2</MenuItem>
 								<MenuDivider />
