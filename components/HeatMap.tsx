@@ -41,7 +41,7 @@ const HeatMap = ({
 			5, 6, 2, 3, 5, 4, 0, 5, 3, 6, 5, 7, 0, 2, 1, 7, 5, 4, 1, 3, 7,
 		],
 	],
-	title = 'Title here',
+	title = '',
 	height = 200,
 }) => {
 	const gen_series = yLabels.map((y, j) => {

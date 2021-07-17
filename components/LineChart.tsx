@@ -57,7 +57,7 @@ const LineChart = ({
 				// dashArray: [0, 5, 8],
 			},
 			title: {
-				text: 'Page Statistics',
+				text: '',
 				align: 'left',
 			},
 			legend: {

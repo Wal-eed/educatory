@@ -8,6 +8,7 @@ import Link from 'next/link';
 import styles from './StatsHeader.module.scss';
 import Image from 'next/image';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+
 interface FeatureProps {
 	title: string;
 	text: string;
