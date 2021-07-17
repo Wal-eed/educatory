@@ -4,19 +4,20 @@ import dynamic from 'next/dynamic';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const MultiDonut = ({
-	title = 'title',
+	title = 'progress',
 	height = 350,
+	total = 10,
 	data = [
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 80 },
+		{ category: 'Science', number: 69 },
+		{ category: 'Numeracy', number: 10 },
+		{ category: 'Logic', number: 50 },
+		{ category: 'Geography', number: 70 },
+		{ category: 'Reading', number: 90 },
+		{ category: 'Writing', number: 80 },
 	],
 }) => {
 	const state = {
-		series: data.map((item) => item.number),
+		series: data.map((item) => 100 * item.number / total ),
 		options: {
 			chart: {
 				height: height,
@@ -34,12 +35,18 @@ const MultiDonut = ({
 						value: {
 							fontSize: '16px',
 						},
+						value: {
+							formatter: function (v) {
+								// By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+								return v * total / 100;
+							},
+						},
 						total: {
 							show: true,
 							label: title,
 							formatter: function (w) {
 								// By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-								return 249;
+								return 5;
 							},
 						},
 					},
