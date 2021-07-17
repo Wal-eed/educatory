@@ -1,23 +1,15 @@
 import {
   Box,
-  Text,
   SimpleGrid,
   Spacer,
   Heading,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
   Button,
   Flex,
-  Divider,
 } from "@chakra-ui/react";
-import { Environment, OrbitControls, useProgress } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import { useRouter } from "next/dist/client/router";
-import React, { Suspense, useRef, useState } from "react";
-import { Mesh } from "three";
+import React, { Suspense } from "react";
 import Model from "../components/Tree";
 
 const Viz: React.FC = () => {
@@ -25,6 +17,15 @@ const Viz: React.FC = () => {
 
   return (
     <SimpleGrid columns={2} spacing={0} height="100vh">
+      <Button
+        margin="1rem"
+        position="fixed"
+        zIndex="5000000"
+        bg="red.300"
+        onClick={(e) => router.push("/")}
+      >
+        Go back
+      </Button>
       <Canvas camera={{ position: [-3, 3, -3], fov: 90 }}>
         <ambientLight intensity={0.5} />
         <OrbitControls />
@@ -32,12 +33,15 @@ const Viz: React.FC = () => {
           <Model />
         </Suspense>
       </Canvas>
-      <Box bg="beige" padding="3rem">
+      <Box
+        bg="white"
+        padding="3rem"
+        margin="1rem"
+        border="1px solid gray"
+        rounded="0.5rem"
+      >
         <Flex flexDir="column" justifyContent="space-between">
           <Box>
-            <Button bg="red.300" onClick={(e) => router.push("/")}>
-              Go back
-            </Button>
             <Heading as="h1" fontSize="4xl">
               Lorem ipsum dolor sit amet.
             </Heading>
