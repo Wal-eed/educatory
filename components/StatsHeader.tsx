@@ -59,7 +59,9 @@ export default function SimpleThreeColumns() {
 				<Link href="stats" passHref>
 					<Flex>
 						<ChevronRightIcon w={6} h={6} />
-						<Text>See More</Text>
+						<Text style={{}}>
+							<u>See More</u>
+						</Text>
 					</Flex>
 				</Link>
 
