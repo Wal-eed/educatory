@@ -7,12 +7,12 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 const Radar = ({
 	label = '',
 	data = [
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 100 },
-		{ category: 'January', number: 80 },
+		{ category: 'Science', number: 69 },
+		{ category: 'Numeracy', number: 10 },
+		{ category: 'Logic', number: 50 },
+		{ category: 'Geography', number: 70 },
+		{ category: 'Reading', number: 90 },
+		{ category: 'Writing', number: 80 },
 	],
 	height = 350,
 }) => {
