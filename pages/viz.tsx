@@ -15,12 +15,13 @@ import {
 } from "@chakra-ui/react";
 import { Environment, OrbitControls, useProgress } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { useRouter } from "next/dist/client/router";
 import React, { Suspense, useRef, useState } from "react";
 import { Mesh } from "three";
 import Model from "../components/Tree";
 
 const Viz: React.FC = () => {
-  const { progress } = useProgress();
+  const router = useRouter();
 
   return (
     <SimpleGrid columns={2} spacing={0} height="100vh">
@@ -110,7 +111,9 @@ const Viz: React.FC = () => {
           <Spacer />
           <Box>
             <Flex>
-              <Button bg="red.300">Go back</Button>
+              <Button bg="red.300" onClick={(e) => router.push("/")}>
+                Go back
+              </Button>
               <Spacer />
 
               <Button bg="green.300">Take the quiz</Button>
