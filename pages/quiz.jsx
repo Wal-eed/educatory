@@ -6,6 +6,7 @@ import RippleButton from 'components/RippleButton';
 import Link from 'next/link';
 import Navbar from 'components/Navbar';
 import { Button } from '@chakra-ui/react';
+import { useRouter } from 'next/dist/client/router';
 
 // const Quiz = () => {
 // 	const [selections, setSelections] = useState([]);
@@ -40,6 +41,7 @@ const Quiz = () => {
 	const [selections, setSelections] = useState([]);
 	const [quizFinished, setQuizFinished] = useState(false);
 	const [incorrectQuestions, setIncorrectQuestions] = useState([]);
+	const router = useRouter();
 
 	const handleSelection = (val, qNum) => {
 		const newSelections = [...selections];
@@ -127,9 +129,9 @@ const Quiz = () => {
 				</Container>
 			))}
 			<Container style={{ textAlign: 'center', marginTop: '14px' }}>
-				<Link href="/">
-					<Button colorScheme="blue">Return</Button>
-				</Link>
+				<Button colorScheme="blue" onClick={() => router.push('/')}>
+					Return
+				</Button>
 			</Container>
 		</div>
 	);

@@ -28,6 +28,7 @@ import { AiFillEye } from 'react-icons/ai';
 import { GiOpenBook } from 'react-icons/gi';
 import { SiAudiomack } from 'react-icons/si';
 import RouterLink from 'next/link';
+import { useRouter } from 'next/dist/client/router';
 
 export default function Header(props) {
 	const { toggleColorMode: toggleMode } = useColorMode();
@@ -37,6 +38,7 @@ export default function Header(props) {
 	const ref = React.useRef();
 	const [y, setY] = React.useState(0);
 	const { height = 0 } = ref.current ? ref.current.getBoundingClientRect() : {};
+	const router = useRouter();
 
 	const { scrollY } = useViewportScroll();
 	React.useEffect(() => {
@@ -91,17 +93,23 @@ export default function Header(props) {
 					py={6}
 					p={{ sm: 8 }}
 				>
-					<Section title="Visual" icon={<AiFillEye />}>
-						See a more visual-based learning exercise.
-					</Section>
+					<div onClick={() => router.push('/viz')}>
+						<Section title="Visual" icon={<AiFillEye />}>
+							See a more visual-based learning exercise.
+						</Section>
+					</div>
 
-					<Section title="Textual" icon={<GiOpenBook />}>
-						Dive into a rigorous textbook-like learning environment.
-					</Section>
+					<div onClick={() => router.push('/text_page')}>
+						<Section title="Textual" icon={<GiOpenBook />}>
+							Dive into a rigorous textbook-like learning environment.
+						</Section>
+					</div>
 
-					<Section title="Audio" icon={<SiAudiomack />}>
-						Listen to a guided audio lesson.
-					</Section>
+					<div onClick={() => router.push('/text_page')}>
+						<Section title="Audio" icon={<SiAudiomack />}>
+							Listen to a guided audio lesson.
+						</Section>
+					</div>
 				</SimpleGrid>
 			</React.Fragment>
 		);
