@@ -9,21 +9,29 @@ import styles from './StatsHeader.module.scss';
 import Image from 'next/image';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
+import data from './StatsData';
+
 interface FeatureProps {
 	title: string;
 	text: string;
 	icon: ReactElement;
 }
 
-const Feature = ({ title, text, icon }: FeatureProps) => {
+const Feature = ({ title, text, icon, number, total }: FeatureProps) => {
 	return (
 		<Stack>
-			<Donut height={200} label={title} />
+			<Donut height={200} label={title} number={number}  total={total}/>
 		</Stack>
 	);
 };
 
 export default function SimpleThreeColumns() {
+	const data_today = [
+		{ category: 'science', number: data.science[data.science.length - 1].number },
+		{ category: 'numeracy', number: data.numeracy[data.science.length - 1].number },
+		{ category: 'logic', number: data.logic[data.science.length - 1].number },
+	];
+
 	return (
 		<Flex justifyContent="center" style={{ margin: '2rem 0' }}>
 			<Box
@@ -34,27 +42,20 @@ export default function SimpleThreeColumns() {
 				<Heading>Hey Alex 👋</Heading>
 				<Text>Here's what we'll be doing today</Text>
 				<SimpleGrid columns={{ base: 2, md: 4 }} spacing={10}>
-					<Feature
-						icon={<Icon as={FcAssistant} w={10} h={10} />}
-						title={'Numeracy'}
-						text={
-							'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-						}
-					/>
-					<Feature
-						icon={<Icon as={FcDonate} w={10} h={10} />}
-						title={'Science'}
-						text={
-							'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-						}
-					/>
-					<Feature
-						icon={<Icon as={FcInTransit} w={10} h={10} />}
-						title={'Geography'}
-						text={
-							'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-						}
-					/>
+					{data_today.map((d, i) => {
+						console.log(d.number)
+						return (
+							<Feature
+								key={i}
+								icon={<Icon as={FcAssistant} w={10} h={10} />}
+								title={d.category}
+								text={
+									'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+								}
+								number={d.number}
+							/>
+						);
+					})}
 				</SimpleGrid>
 
 				<Link href="stats" passHref>

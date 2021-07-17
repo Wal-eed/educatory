@@ -15,7 +15,7 @@ const LineChart = ({
 			{ date: '18 Jul', number: 40 },
 			{ date: '17 Jul', number: 40 },
 		],
-		geography: [
+		logic: [
 			{ date: '18 Jul', number: 40 },
 			{ date: '17 Jul', number: 40 },
 		],
@@ -33,8 +33,8 @@ const LineChart = ({
 			},
 
 			{
-				name: 'geography',
-				data: data.geography.map((item) => item.number),
+				name: 'logic',
+				data: data.logic.map((item) => item.number),
 			},
 		],
 		options: {

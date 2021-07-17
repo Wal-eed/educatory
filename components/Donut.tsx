@@ -4,9 +4,9 @@ import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const Donut = ({ label = 'no label', percentage = 50, height = 200 }) => {
+const Donut = ({ label = 'no label', number = 5, total = 10, height = 200 }) => {
 	var state = {
-		series: [percentage],
+		series: [100 * number / total],
 		options: {
 			chart: {
 				height: height,
@@ -27,7 +27,7 @@ const Donut = ({ label = 'no label', percentage = 50, height = 200 }) => {
 						value: {
 							color: 'white',
 							formatter: function (val) {
-								return val;
+								return val / total;
 							},
 						},
 					},
