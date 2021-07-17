@@ -1,10 +1,12 @@
 import React from 'react';
 import { Heading, Text, Container, Flex } from '@chakra-ui/react';
 import SwitchView from 'components/SwitchView';
+import Navbar from 'components/Navbar';
 
 const Text_page = () => {
 	return (
 		<>
+			<Navbar />
 			<Flex float="right">
 				<SwitchView />
 			</Flex>
