@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const Donut = ({ label = "no label", percentage = 50, height = 200, children = null}) => {
+const Donut = ({ label = "no label", percentage = 50, height = 200}) => {
   var state = {
     series: [percentage],
     options: {
