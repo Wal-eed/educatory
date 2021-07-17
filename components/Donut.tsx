@@ -13,11 +13,20 @@ const Donut = ({ label = 'no label', percentage = 50, height = 200 }) => {
 				type: 'radialBar',
 			},
 			colors: ['#20E647'],
-
 			plotOptions: {
 				radialBar: {
+					startAngle: -150,
+					endAngle: 150,
 					hollow: {
-						size: '70%',
+						size: '50%',
+					},
+					dataLabels: {
+						value: {
+							color: 'white',
+							formatter: function (val) {
+								return val;
+							},
+						},
 					},
 				},
 			},
