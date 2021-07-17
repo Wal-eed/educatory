@@ -2,6 +2,9 @@ import { ReactElement } from "react";
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from "@chakra-ui/react";
 import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
 import { Button, ButtonGroup } from "@chakra-ui/react";
+import Donut from "./Donut";
+import { Heading } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface FeatureProps {
   title: string;
@@ -12,7 +15,8 @@ interface FeatureProps {
 const Feature = ({ title, text, icon }: FeatureProps) => {
   return (
     <Stack>
-      <Flex
+      <Donut height={200} label={title} />
+      {/* <Flex
         w={16}
         h={16}
         align={"center"}
@@ -23,49 +27,56 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
         mb={1}
       >
         {icon}
-      </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={"gray.600"}>{text}</Text>
+      </Flex> */}
+      {/* <Text fontWeight={600}>{title}</Text> */}
+      {/* <Text color={"gray.600"}>{text}</Text> */}
     </Stack>
   );
 };
 
 export default function SimpleThreeColumns() {
   return (
-    <Box p={4}>
-      <SimpleGrid columns={{ base: 2, md: 4 }} spacing={10}>
-        <Feature
-          icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={"Numeracy"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-        />
-        <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={"Science"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-        />
-        <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={"Geography"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-        />
-        <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={"Geography"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-        />
-      </SimpleGrid>
-      <Button colorScheme="blue" style={{}}>
-        Find out more
-      </Button>
-    </Box>
+    <Flex justifyContent="center" style={{ margin: "2rem 0" }}>
+      <Box p={4} bg="#F0F0F0" width="80%">
+        <Flex justifyContent="center">
+          <Heading>Progress</Heading>
+        </Flex>
+        <SimpleGrid columns={{ base: 2, md: 4 }} spacing={10}>
+          <Feature
+            icon={<Icon as={FcAssistant} w={10} h={10} />}
+            title={"Numeracy"}
+            text={
+              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            }
+          />
+          <Feature
+            icon={<Icon as={FcDonate} w={10} h={10} />}
+            title={"Science"}
+            text={
+              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            }
+          />
+          <Feature
+            icon={<Icon as={FcInTransit} w={10} h={10} />}
+            title={"Geography"}
+            text={
+              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            }
+          />
+          <Feature
+            icon={<Icon as={FcInTransit} w={10} h={10} />}
+            title={"Geography"}
+            text={
+              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            }
+          />
+        </SimpleGrid>
+        <Link href="stats" passHref>
+          <Button colorScheme="blue" float="right">
+            Find out more
+          </Button>
+        </Link>
+      </Box>
+    </Flex>
   );
 }
