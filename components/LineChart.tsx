@@ -4,20 +4,38 @@ import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const LineChart = () => {
+const LineChart = ({
+	data = {
+		// math:
+		science: [
+			{ date: '18 Jul', number: 40 },
+			{ date: '17 Jul', number: 40 },
+		],
+		numeracy: [
+			{ date: '18 Jul', number: 40 },
+			{ date: '17 Jul', number: 40 },
+
+		],
+		geography: [
+			{ date: '18 Jul', number: 40 },
+			{ date: '17 Jul', number: 40 },
+		],
+	},
+}) => {
 	const state = {
 		series: [
 			{
-				name: 'Session Duration',
-				data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10],
+				name: 'science',
+				data: data.science.map(item => item.number),
 			},
 			{
-				name: 'Page Views',
-				data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35],
+				name: 'numeracy',
+				data: data.numeracy.map(item => item.number),
 			},
+
 			{
-				name: 'Total Visits',
-				data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47],
+				name: 'geography',
+				data: data.geography.map(item => item.number),
 			},
 		],
 		options: {
@@ -34,7 +52,7 @@ const LineChart = () => {
 			stroke: {
 				width: [5, 7, 5],
 				curve: 'straight',
-				dashArray: [0, 8, 5],
+				// dashArray: [0, 5, 8],
 			},
 			title: {
 				text: 'Page Statistics',
@@ -52,20 +70,7 @@ const LineChart = () => {
 				},
 			},
 			xaxis: {
-				categories: [
-					'01 Jan',
-					'02 Jan',
-					'03 Jan',
-					'04 Jan',
-					'05 Jan',
-					'06 Jan',
-					'07 Jan',
-					'08 Jan',
-					'09 Jan',
-					'10 Jan',
-					'11 Jan',
-					'12 Jan',
-				],
+				categories: data.science.map(item => item.date), 
 			},
 			tooltip: {
 				y: [
