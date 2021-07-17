@@ -1,0 +1,33 @@
+.card {
+	display: block;
+	position: relative;
+	height: 200px;
+	margin: 14px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	border-radius: 5px;
+}
+
+.tag {
+	display: block;
+	padding: 4px 7px;
+	position: absolute;
+	right: -14px;
+	top: 10px;
+	background-color: darkblue;
+	color: dodgerblue;
+	border-top-right-radius: 7px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	font-size: 75%;
+
+	&::after {
+		display: block;
+		content: '';
+		height: 14px;
+		width: 14px;
+		position: absolute;
+		background-color: dodgerblue;
+		right: 0;
+		bottom: -14px;
+		border-bottom-right-radius: 14px;
+	}
+}
