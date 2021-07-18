@@ -1,4 +1,17 @@
-import { Box, SimpleGrid, Spacer, Heading, Button, Flex, Container } from '@chakra-ui/react';
+import {
+	Box,
+	SimpleGrid,
+	Spacer,
+	Heading,
+	Button,
+	Flex,
+	Image,
+	Accordion,
+	AccordionItem,
+	AccordionButton,
+	AccordionIcon,
+	AccordionPanel,
+} from '@chakra-ui/react';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { useRouter } from 'next/dist/client/router';
@@ -42,40 +55,70 @@ const Viz: React.FC = () => {
 					<Flex flexDir="column" justifyContent="space-between">
 						<Box>
 							<Heading as="h1" fontSize="4xl">
-								Lorem ipsum dolor sit amet.
+								Trees (Visual).
 							</Heading>
 							<br />
 							<i>Click and drag on the tree to view from different angles.</i>
 							<Spacer />
 						</Box>
 						<Box rounded="0.5rem" padding="0.5rem" marginTop="1rem" marginBottom="1rem">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel ea aliquid
-							soluta quas molestias cupiditate repellat quasi alias officiis repudiandae
-							consequuntur nisi dolores ipsum possimus, a tempore atque voluptatibus numquam porro
-							in illo itaque? Et, amet eveniet harum ducimus dignissimos explicabo? Recusandae,
-							labore ducimus earum aperiam at temporibus cum.
+							Trees are tall, woody plants and are usually more than 10 feet (3 meters) tall. They
+							have roots, a trunk, branches, and leaves.
 						</Box>
-						<Box rounded="0.5rem" padding="0.5rem" marginTop="1rem" marginBottom="1rem">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel ea aliquid
-							soluta quas molestias cupiditate repellat quasi alias officiis repudiandae
-							consequuntur nisi dolores ipsum possimus, a tempore atque voluptatibus numquam porro
-							in illo itaque? Et, amet eveniet harum ducimus dignissimos explicabo? Recusandae,
-							labore ducimus earum aperiam at temporibus cum.
-						</Box>
-						<Box rounded="0.5rem" padding="0.5rem" marginTop="1rem" marginBottom="1rem">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel ea aliquid
-							soluta quas molestias cupiditate repellat quasi alias officiis repudiandae
-							consequuntur nisi dolores ipsum possimus, a tempore atque voluptatibus numquam porro
-							in illo itaque? Et, amet eveniet harum ducimus dignissimos explicabo? Recusandae,
-							labore ducimus earum aperiam at temporibus cum.
-						</Box>
-						<Box rounded="0.5rem" padding="0.5rem" marginTop="1rem" marginBottom="1rem">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel ea aliquid
-							soluta quas molestias cupiditate repellat quasi alias officiis repudiandae
-							consequuntur nisi dolores ipsum possimus, a tempore atque voluptatibus numquam porro
-							in illo itaque? Et, amet eveniet harum ducimus dignissimos explicabo? Recusandae,
-							labore ducimus earum aperiam at temporibus cum.
-						</Box>
+						<Accordion allowMultiple>
+							<AccordionItem>
+								<h2>
+									<AccordionButton>
+										<Box flex="1" textAlign="left">
+											Parts of the tree
+										</Box>
+										<AccordionIcon />
+									</AccordionButton>
+								</h2>
+								<AccordionPanel pb={4}>
+									<Image src="/images/one.png" alt="Parts of the tree" />
+								</AccordionPanel>
+							</AccordionItem>
+							<AccordionItem>
+								<h2>
+									<AccordionButton>
+										<Box flex="1" textAlign="left">
+											Tree Leaves
+										</Box>
+										<AccordionIcon />
+									</AccordionButton>
+								</h2>
+								<AccordionPanel pb={4}>
+									<Image src="/images/two.png" alt="Tree leaves" />
+								</AccordionPanel>
+							</AccordionItem>
+							<AccordionItem>
+								<h2>
+									<AccordionButton>
+										<Box flex="1" textAlign="left">
+											Tree trunk
+										</Box>
+										<AccordionIcon />
+									</AccordionButton>
+								</h2>
+								<AccordionPanel pb={4}>
+									<Image src="/images/three.png" alt="Tree trunk" />
+								</AccordionPanel>
+							</AccordionItem>
+							<AccordionItem>
+								<h2>
+									<AccordionButton>
+										<Box flex="1" textAlign="left">
+											Tree roots
+										</Box>
+										<AccordionIcon />
+									</AccordionButton>
+								</h2>
+								<AccordionPanel pb={4}>
+									<Image src="/images/four.png" alt="Tree Roots" />
+								</AccordionPanel>
+							</AccordionItem>
+						</Accordion>
 						<Spacer />
 						<Box>
 							<Flex>
