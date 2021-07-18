@@ -4,7 +4,7 @@ import { Grid, Box } from '@chakra-ui/react';
 import Card from './Card';
 import { Stack, HStack, VStack } from '@chakra-ui/react';
 
-const LessonCards = ({ cards }) => {
+const LessonCards = ({ cards, text="b" }) => {
 	return (
 		<div>
 			<HStack spacing="24px">
@@ -12,7 +12,7 @@ const LessonCards = ({ cards }) => {
 					cards.map((card) => (
 						<Box>
 							{/* <LessonCard card={card} /> */}
-							<Card card={card} />
+							<Card card={card} text={card.text}/>
 						</Box>
 					))}
 			</HStack>
