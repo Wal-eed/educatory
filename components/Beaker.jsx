@@ -8,8 +8,8 @@ const Beaker = () => {
 			style={{
 				position: 'absolute',
 				top: '-60px',
-				right: '-170px',
-				transform: `scale(0.2) rotate(-20deg)`,
+				right: '-150px',
+				transform: `scale(0.3) rotate(-20deg)`,
 				transformOrigin: '0 0',
 			}}
 		>
