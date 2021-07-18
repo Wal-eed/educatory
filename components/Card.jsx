@@ -18,7 +18,7 @@ const modeToIcon = {
 	visual: <MdRemoveRedEye />,
 };
 
-const Ma = ({ card }) => {
+const Ma = ({ card, text = "a" }) => {
 	const { title, image, isRecommended, lessonType } = card;
 
 	return (
@@ -45,7 +45,7 @@ const Ma = ({ card }) => {
 				</chakra.h1>
 
 				<chakra.p mt={2} fontSize="sm" color={useColorModeValue('gray.600', 'gray.400')}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit In odit
+					{text}
 				</chakra.p>
 
 				<Flex mt={3} alignItems="center" justifyContent="space-between">
