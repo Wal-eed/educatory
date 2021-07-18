@@ -3,8 +3,8 @@ import { chakra, Box, Flex, useColorModeValue, HStack } from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons';
 import RippleButton from './RippleButton';
 
-const Ma = ({ card }) => {
-	const { title, image, label } = card;
+const Ma = ({ card, text = "a" }) => {
+	const { title, image, isRecommended, lessonType } = card;
 
 	return (
 		<Flex
@@ -29,7 +29,7 @@ const Ma = ({ card }) => {
 				</chakra.h1>
 
 				<chakra.p mt={2} fontSize="sm" color={useColorModeValue('gray.600', 'gray.400')}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit In odit
+					{text}
 				</chakra.p>
 
 				<Flex mt={3} alignItems="center" justifyContent="space-between">
