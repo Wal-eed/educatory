@@ -4,7 +4,7 @@ import LessonSection from 'components/LessonSection';
 import StatsHeader from 'components/StatsHeader';
 import { Container } from '@chakra-ui/react';
 import RippleButton from 'components/RippleButton';
-import Navbar from 'components/Navbar';
+import SexierNavbar from 'components/SexierNavbar';
 import styles from './Home.module.scss';
 
 const home = (props) => {
@@ -15,7 +15,7 @@ const home = (props) => {
 				height: '100%',
 			}}
 		>
-			<Navbar />
+			<SexierNavbar />
 			<StatsHeader />
 			<LessonSection></LessonSection>
 			{/* <Footer /> */}

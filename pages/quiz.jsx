@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styles from './Quiz.module.scss';
 import RippleButton from 'components/RippleButton';
 import Link from 'next/link';
-import Navbar from 'components/Navbar';
+import SexierNavbar from 'components/SexierNavbar';
 import { Button } from '@chakra-ui/react';
 import { useRouter } from 'next/dist/client/router';
 
@@ -69,7 +69,7 @@ const Quiz = () => {
 
 	return !quizFinished ? (
 		<div>
-			<Navbar />
+			<SexierNavbar />
 			{questions.map((eachQuestion, qNum) => (
 				<Container className={styles.quizContainer}>
 					<Text className={styles.question} fontSize="2xl">

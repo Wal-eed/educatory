@@ -2,6 +2,7 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import theme from '../lib/theme';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import Head from 'next/head';
 
 const colors = {
 	brand: {
@@ -27,6 +28,10 @@ const theme2 = extendTheme({ colors, config });
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ChakraProvider theme={theme2}>
+			<Head>
+				<title>Educatory</title>
+				<link rel="icon" href="/images/logo-no-text.png"></link>
+			</Head>
 			<Component {...pageProps} />
 		</ChakraProvider>
 	);

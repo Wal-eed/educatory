@@ -5,11 +5,11 @@ import HeatMap from 'components/HeatMap';
 import Radar from 'components/Radar';
 // import StatsSideBar from 'components/StatsSideBar';
 import LineChart from 'components/LineChart';
-import Navbar from 'components/Navbar';
+import SexierNavbar from 'components/SexierNavbar';
 import Paper from 'components/Paper';
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from 'next/dist/client/router';
 
-import data from "../components/StatsData"
+import data from '../components/StatsData';
 
 const Stats = () => {
 	const router = useRouter();
@@ -22,7 +22,7 @@ const Stats = () => {
 
 	return (
 		<>
-			<Navbar />
+			<SexierNavbar />
 			<Button
 				margin="1rem"
 				position="fixed"
@@ -50,7 +50,7 @@ const Stats = () => {
 						<Flex justifyContent="center">
 							<Heading>Core Competencies</Heading>
 						</Flex>
-						<Radar/>
+						<Radar />
 					</Paper>
 				</SimpleGrid>
 				<Paper>

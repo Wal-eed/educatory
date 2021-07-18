@@ -162,10 +162,9 @@ export default function Header(props) {
 						<Flex align="flex-start">
 							<RouterLink href="/">
 								<HStack>
-									<Logo />
 									<div>
 										<RouterLink href="/">
-											<Button
+											{/* <Button
 												bg={bg}
 												color="gray.500"
 												display="inline-flex"
@@ -174,8 +173,15 @@ export default function Header(props) {
 												_hover={{ color: cl }}
 												_focus={{ boxShadow: 'none' }}
 											>
-												Educatory
-											</Button>
+											
+											</Button> */}
+											<img
+												src="/images/logo.png"
+												style={{
+													height: '30px',
+													cursor: 'pointer',
+												}}
+											/>
 										</RouterLink>
 									</div>
 								</HStack>
