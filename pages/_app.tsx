@@ -3,6 +3,14 @@ import type { AppProps } from 'next/app';
 import theme from '../lib/theme';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
+import { motion } from 'framer-motion';
+
+const variants = {
+	hidden: { opacity: 0, x: -200, y: 0 },
+	enter: { opacity: 1, x: 0, y: 0 },
+	exit: { opacity: 0, x: 0, y: -100 },
+};
+
 const colors = {
 	brand: {
 		50: '#ecefff',
@@ -27,7 +35,16 @@ const theme2 = extendTheme({ colors, config });
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ChakraProvider theme={theme2}>
-			<Component {...pageProps} />
+			<motion.main
+				variants={variants}
+				initial="hidden"
+				animate="enter"
+				exit="exit"
+				transition={{ type: 'linear' }}
+				className=""
+			>
+				<Component {...pageProps} />
+			</motion.main>
 		</ChakraProvider>
 	);
 }
