@@ -122,6 +122,7 @@ const Viz: React.FC = () => {
 						<Spacer />
 						<Box>
 							<Flex>
+								<br />
 								<Button bg="green.300" onClick={(e) => router.push('/quiz')}>
 									Take the quiz
 								</Button>
