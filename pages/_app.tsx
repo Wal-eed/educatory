@@ -4,6 +4,14 @@ import theme from '../lib/theme';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import Head from 'next/head';
 
+import { motion } from 'framer-motion';
+
+const variants = {
+	hidden: { opacity: 0, x: -200, y: 0 },
+	enter: { opacity: 1, x: 0, y: 0 },
+	exit: { opacity: 0, x: 0, y: -100 },
+};
+
 const colors = {
 	brand: {
 		50: '#ecefff',
@@ -32,7 +40,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>Educatory</title>
 				<link rel="icon" href="/images/logo-no-text.png"></link>
 			</Head>
-			<Component {...pageProps} />
+			<motion.main
+				variants={variants}
+				initial="hidden"
+				animate="enter"
+				exit="exit"
+				transition={{ type: 'linear' }}
+				className=""
+			>
+				<Component {...pageProps} />
+			</motion.main>
 		</ChakraProvider>
 	);
 }
