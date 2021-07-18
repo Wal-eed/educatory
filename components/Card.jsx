@@ -19,7 +19,7 @@ const modeToIcon = {
 	visual: <MdRemoveRedEye />,
 };
 
-const Ma = ({ card, text = "a" }) => {
+const Ma = ({ card, text = 'a' }) => {
 	const { title, image, isRecommended, lessonType } = card;
 
 	return (
@@ -33,6 +33,7 @@ const Ma = ({ card, text = "a" }) => {
 			className={styles.card}
 			style={{
 				position: 'relative',
+				width: '400px',
 			}}
 		>
 			{isRecommended && (
