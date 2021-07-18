@@ -49,31 +49,14 @@ const Ma = ({ card }) => {
 				</chakra.p>
 
 				<Flex mt={3} alignItems="center" justifyContent="space-between">
-					<chakra.h1 color="black" fontWeight="bold" fontSize="xs">
+					<chakra.p mt={2} fontSize="sm" color={useColorModeValue('gray.600', 'gray.400')}>
 						<span>{isRecommended && <>Recommended!</>}</span>
 						<span className={styles.icon}>{modeToIcon[lessonType]}</span>
-					</chakra.h1>
+					</chakra.p>
 
-					<chakra.button
-						px={2}
-						py={1}
-						bg="white"
-						fontSize="xs"
-						color="gray.900"
-						fontWeight="bold"
-						rounded="lg"
-						textTransform="uppercase"
-						_hover={{
-							bg: 'gray.200',
-						}}
-						_focus={{
-							bg: 'gray.400',
-						}}
-					>
-						<RouterLink href={`/${modeToLink[lessonType]}`}>
-							<Button colorScheme="blue">Start</Button>
-						</RouterLink>
-					</chakra.button>
+					<RouterLink href={`/${modeToLink[lessonType]}`}>
+						<Button colorScheme="blue">Start</Button>
+					</RouterLink>
 				</Flex>
 			</Box>
 		</Flex>

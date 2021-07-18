@@ -20,7 +20,7 @@ interface FeatureProps {
 const Feature = ({ title, text, icon, number, total }: FeatureProps) => {
 	return (
 		<Stack>
-			<Donut height={200} label={title} number={number}  total={total}/>
+			<Donut height={200} label={title} number={number} total={total} />
 		</Stack>
 	);
 };
@@ -43,7 +43,7 @@ export default function SimpleThreeColumns() {
 				<Text>Here's what we'll be doing today</Text>
 				<SimpleGrid columns={{ base: 2, md: 4 }} spacing={10}>
 					{data_today.map((d, i) => {
-						console.log(d.number)
+						console.log(d.number);
 						return (
 							<Feature
 								key={i}
@@ -61,7 +61,7 @@ export default function SimpleThreeColumns() {
 				<Link href="stats" passHref>
 					<Flex>
 						<ChevronRightIcon w={6} h={6} />
-						<Text style={{}}>
+						<Text style={{ cursor: 'pointer' }}>
 							<u>See More</u>
 						</Text>
 					</Flex>
