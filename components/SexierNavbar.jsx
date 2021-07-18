@@ -105,7 +105,7 @@ export default function Header(props) {
 						</Section>
 					</div>
 
-					<div onClick={() => router.push('/text_page')}>
+					<div onClick={() => router.push('/audio_page')}>
 						<Section title="Audio" icon={<SiAudiomack />}>
 							Listen to a guided audio lesson.
 						</Section>

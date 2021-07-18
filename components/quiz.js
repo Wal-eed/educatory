@@ -1,46 +1,46 @@
 export const questions = [
     {
-        question: "What is a tree?",
+        question: "Which of these are all part of a tree?",
         choices: [
             {
-                text: "mayonnaise",
-                isCorrect: false
-            },
-            {
-                text: "a plant",
+                text: "Root, bark, leaves",
                 isCorrect: true,
-                explanation: "Good attempt. It is a plant. Yes.",
+                explanation: "Good attempt. A tree has roots, barks and leaves.",
             },
             {
-                text: "turtle",
+                text: "Bark, leaves, water",
+                isCorrect: false,
+            },
+            {
+                text: "Air, leaves, bark",
                 isCorrect: false
             },
 
             {
-                text: "c#",
+                text: "Root, soil, water",
                 isCorrect: false
             },
 
         ]
     },
     {
-        question: "What is a leaf?",
+        question: "Which part of a tree is underneath the soil?",
         choices: [
             {
-                text: "python",
+                text: "Soil",
                 isCorrect: false,
             },
             {
-                text: "haskell",
+                text: "Leaves",
                 isCorrect: false
             },
             {
-                text: "andrew taylor",
+                text: "Bark",
                 isCorrect: false
             },
             {
-                text: "something on a tree",
-                explanation: "Good try. A leaf is something on a tree.",
+                text: "Roots",
+                explanation: "Good try. The roots of a tree are generally beneath the soil (but not always!).",
                 isCorrect: true
             },
 
@@ -48,5 +48,5 @@ export const questions = [
     },
 ]
 export const answers = [
-    1, 3
-]
+    0, 3
+];

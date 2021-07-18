@@ -92,7 +92,7 @@ const Quiz = () => {
 		</div>
 	) : (
 		<div>
-			<Navbar />
+			<SexierNavbar />
 			{incorrectQuestions.map((eachQuestion) => (
 				<Container className={styles.quizContainer}>
 					<Text className={styles.question} fontSize="2xl">
