@@ -27,7 +27,7 @@ const Donut = ({ label = 'no label', number = 5, total = 10, height = 200 }) => 
 						value: {
 							color: 'white',
 							formatter: function (val) {
-								return val / total;
+								return val / total + " / " + total;
 							},
 						},
 					},
