@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About
+Educatory is a learning platform for children with learning disabillities. 
+
+Take a look at the hackathon pitch here: https://www.youtube.com/watch?v=wUZMYPQURrw&t=3s
+Live demo: https://educatory.netlify.app
 
 ## Getting Started
 
