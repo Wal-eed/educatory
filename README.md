@@ -1,6 +1,6 @@
 ## About
 Educatory is a learning platform for children with learning disabillities. 
-
+Built as part of CSESoc Annual Hackathon, placing 2nd overall out of 300 competitiors and 70 teams.
 Take a look at the hackathon pitch here: https://www.youtube.com/watch?v=wUZMYPQURrw&t=3s
 Live demo: https://educatory.netlify.app
 
